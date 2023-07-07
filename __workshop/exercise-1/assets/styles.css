@@ -1,0 +1,71 @@
+main {
+  padding: 0 36px;
+}
+.track {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.track li {
+  background: green;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  border-bottom: 2px dashed #fff;
+  position: relative;
+  width: calc(100% - 50px);
+}
+
+.track li:last-child {
+  border-bottom: none;
+}
+
+.track li span:first-child {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: -24px;
+  height: 80px;
+}
+
+.length {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.15);
+  height: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 50px);
+}
+.length-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  height: 32px;
+  padding: 0 10px;
+}
+.frog {
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  position: relative;
+  left: 0;
+  transition: all ease-out 300ms;
+  z-index: 1;
+}
+.frog-name {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 24px;
+  font-weight: 700;
+  position: absolute;
+  right: 14px;
+  text-transform: uppercase;
+  z-index: 0;
+}
