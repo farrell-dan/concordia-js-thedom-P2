@@ -2,13 +2,13 @@
 
 ## 🦊 Pre-lecture
 
-⏲️ _not today._
+There is no pre-lecture for this workshop.
 
 ---
 
 ## 🦉 Lecture
 
-There is no new material today. We may go over some FUNdamentals in the morning. Come to class with your questions! :)
+- [Lecture 1 | Timing and Delay](./lecture/lecture-1-timing-and-delay.md)
 
 ---
 
@@ -22,13 +22,13 @@ yarn install
 
 ## ⚡ Exercises
 
-### Exercise 1 - The Frog Race
+### [Exercise 1](./workshop/exercise-1/) - The Frog Race
 
 <img src="./assets/exercise-1.gif" />
 
 By the end of this exercise, you will have a track, a stable of frogs that you can race, and everytime you load the page, frogs from the stable will race a predetermined distance. _Gambling is not condoned or encouraged._
 
-All of the work will be done inside of `__workshop/exercise-1/` folder. Take a few minutes to see what's in there. \_You will write the majority of your code in `app.js`.
+All of the work will be done inside of `workshop/exercise-1/` folder. Take a few minutes to see what's in there. You will write the majority of your code in `app.js`.
 
 #### Exercise 1.1 - Set up the track
 
