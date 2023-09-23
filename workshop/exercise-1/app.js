@@ -1,10 +1,8 @@
 // Preset values
 const FROGS = 3;
-
+//Exercise 1.1
 for ( let count = 1 ; count <= FROGS ; count++) {
-    
     let lane = document.createElement("li");
-
     lane.id = `lane-${count}`;
     
     const laneNumber = document.createElement("span");
@@ -15,12 +13,14 @@ for ( let count = 1 ; count <= FROGS ; count++) {
     track.appendChild(lane);
 } ;
 
+//Exercise 1.2
 const racers = [ ];
 
 for (let frogs = 0; frogs < 3; frogs++ ) {
     racers.push(frogStable[frogs]);
 }
 
+//Exercise 1.3 & 1.4 & 1.5
 racers.forEach((frog, count) => {
     const laneId = `lane-${count+1}`;
     let lane = document.getElementById(laneId);
@@ -48,11 +48,10 @@ racers.forEach((frog, count) => {
 
 console.log(racers);
 
+//Exercise 1.6
 function racingFrog(racer) {
-    // console.log("racingFrog() ", racer)
-}
-
-racers.forEach((racer) =>{
+    console.log("racingFrog() ", racer)
+    
     const trackWidth = track.offsetWidth;
     
     const hop = setInterval(function (){
@@ -68,4 +67,8 @@ racers.forEach((racer) =>{
         console.log(`${racer.name} is at ${racer.progress}`)
           }
     },1000);
+}
+
+racers.forEach((racer) =>{
+    racingFrog(racer);
 });
