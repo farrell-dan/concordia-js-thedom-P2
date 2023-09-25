@@ -29,6 +29,9 @@ racers.forEach((frog, count) => {
     frogElement.classList.add("frog");
     frogElement.style.backgroundColor = frog.color;
 
+    const extraSpan = document.createElement("span"); //created this to lose the span:first-child selector that moved the number off the frog
+
+
     const frogNumber = document.createElement("span");
     frogNumber.classList.add("frog");
     frogNumber.textContent = `${frog.number}`;
@@ -37,11 +40,10 @@ racers.forEach((frog, count) => {
     frogName.classList.add("frog-name");
     frogName.textContent = `${frog.name}`;
 
-
-    
+    frogElement.appendChild(extraSpan);
+    frogElement.appendChild(frogNumber);
     
     lane.appendChild(frogElement);
-    frogElement.appendChild(frogNumber);
     lane.appendChild(frogName);
 
     frog.progress = 0;
