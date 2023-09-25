@@ -58,24 +58,28 @@ function racingFrog(racer) {
     
     const trackWidth = track.offsetWidth;
     const frogElement = document.querySelector(`#${racer.lane} .frog`)
-    
-    const hop = setInterval(function (){
-        const hopLength = Math.floor(((Math.random()* 100) / trackWidth)*100);
-        
-        racer.progress += hopLength;
-        
-        if (racer.progress >=100){
-            racer.progress = 100;
-            console.log( `${racer.name} has finished the race!`)
-            clearInterval(hop);
-        }else{
-        console.log(`${racer.name} is at ${racer.progress}`)
+//Exercise 1.8 -random delay
+    const randomDelay = Math.floor(Math.random() * 2000);
 
-        const newPosition = (racer.progress / 100) * (trackWidth - 50)
-        frogElement.style.left = `${newPosition}px`
+    setTimeout(function () {
+        const hop = setInterval(function (){
+            const hopLength = Math.floor(((Math.random()* 100) / trackWidth)*100);
+            
+            racer.progress += hopLength;
+            
+            if (racer.progress >=100){
+                racer.progress = 100;
+                console.log( `${racer.name} has finished the race!`)
+                clearInterval(hop);
+            }else{
+            console.log(`${racer.name} is at ${racer.progress}`)
+    // Exercise 1.7
+            const newPosition = (racer.progress / 100) * (trackWidth - 50)
+            frogElement.style.left = `${newPosition}px`
 
-          }
-    },1000);
+            }
+        },1000);
+    }, randomDelay);
 }
 
 racers.forEach((racer) =>{
